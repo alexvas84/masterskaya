@@ -129,6 +129,19 @@ $(function () {
 
 	});
 
+	let mixBtn = document.querySelectorAll('.project-btn');
+
+	for (btn of mixBtn) btn.addEventListener('click', (e) => {
+		for ($atr of mixBtn) deActive($atr);
+		e.target.classList.add('active');
+	});
+
+	function deActive($atr) {
+		$atr.classList.remove('active');
+	};
+
+
+	var mixer = mixitup('.project__inner-items');
 
 });
 
