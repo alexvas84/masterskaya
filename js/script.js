@@ -178,7 +178,7 @@ $(function () {
 
 	new WOW(
 		{
-			offset: 150
+			offset: 130
 		}
 	).init();
 
