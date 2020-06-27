@@ -845,9 +845,9 @@ li {
 .main__title .title::before {
   content: '';
   width: 100%;
-  height: 0.3px;
+  height: 1px;
   position: absolute;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.3);
   bottom: 0;
   left: 0;
 }
@@ -1120,7 +1120,7 @@ li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 30px -15px;
+  margin: 60px -15px 40px;
 }
 
 .advantage__item {
@@ -1139,6 +1139,30 @@ li {
   margin-bottom: 20px;
 }
 
+.advantage__item:nth-child(1),
+.advantage__item:nth-child(5) {
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+}
+
+.advantage__item:nth-child(2),
+.advantage__item:nth-child(6) {
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+
+.advantage__item:nth-child(3),
+.advantage__item:nth-child(7) {
+  -webkit-animation-delay: .7s;
+          animation-delay: .7s;
+}
+
+.advantage__item:nth-child(4),
+.advantage__item:nth-child(8) {
+  -webkit-animation-delay: .9s;
+          animation-delay: .9s;
+}
+
 .advantage__item-img {
   height: 50px;
 }
@@ -1153,15 +1177,16 @@ li {
   color: #fff;
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
-  line-height: calc(20 / 15);
+  line-height: calc(23 / 15);
   font-weight: 500;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+  margin-top: 30px;
 }
 
 .about {
-  background-color: #272626;
+  background-color: #252525;
   padding: 60px 0;
 }
 
@@ -1428,7 +1453,7 @@ li {
           align-items: center;
   text-align: center;
   padding: 20px;
-  max-width: 180px;
+  min-width: 180px;
   width: 100%;
   height: 180px;
   border-radius: 50%;
@@ -1474,6 +1499,31 @@ li {
 
 .tab.active:after {
   height: 60px;
+}
+
+.tab:nth-child(1) {
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+}
+
+.tab:nth-child(2) {
+  -webkit-animation-delay: .8s;
+          animation-delay: .8s;
+}
+
+.tab:nth-child(3) {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+.tab:nth-child(4) {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+
+.tab:nth-child(5) {
+  -webkit-animation-delay: 2.0s;
+          animation-delay: 2.0s;
 }
 
 .tab_content {

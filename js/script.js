@@ -176,6 +176,12 @@ $(function () {
 		window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 	});
 
+	new WOW(
+		{
+			offset: 150
+		}
+	).init();
+
 	var mixer = mixitup('.project__inner-items');
 
 });
