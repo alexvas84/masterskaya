@@ -140,6 +140,41 @@ $(function () {
 		$atr.classList.remove('active');
 	};
 
+	$('.wrapper .tab').on('click', function (event) {
+		var id = $(this).attr('data-id');
+		$('.wrapper').find('.tab-item').removeClass('active-tab').hide();
+		$('.wrapper .tabs').find('.tab').removeClass('active');
+		$(this).addClass('active');
+		$('#' + id).addClass('active-tab').fadeIn();
+		return false;
+	});
+
+	$('.wrapper .tab.active').click();
+
+
+
+
+	const parallaxNum = 0.3;
+	const parallax = document.querySelectorAll('.parallax').forEach((item) => {
+		window.addEventListener('scroll', () => {
+			let offset = window.pageYOffset;
+			let itemOffset = item.getBoundingClientRect().top + document.body.scrollTop;
+			//let itemOffset = item.getBoundingClientRect().top;
+			console.log(offset);
+			item.style.backgroundPositionY = itemOffset * parallaxNum + 'px';
+		});
+	});
+
+
+
+	const scrollBtn = document.getElementById('scrollToTop');
+	window.onscroll = () => {
+		window.scrollY > 500 ? scrollBtn.classList.remove('hide') : scrollBtn.classList.add('hide');
+	};
+
+	scrollBtn.addEventListener('click', () => {
+		window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+	});
 
 	var mixer = mixitup('.project__inner-items');
 
