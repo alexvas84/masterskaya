@@ -986,7 +986,7 @@ sup {
   top: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: 50;
+  z-index: 99;
 }
 
 .header__inner {
@@ -2110,6 +2110,12 @@ textarea.form__text {
   cursor: pointer;
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+.js-validate-error-label {
+  margin-top: -15px;
+  margin-bottom: 20px;
+  margin-left: auto;
 }
 
 .footer__copy {
