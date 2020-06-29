@@ -1657,6 +1657,9 @@ sup {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #18191B;
+  -webkit-box-shadow: 0px 0px 16px 6px rgba(0, 0, 0, 0.39);
+          box-shadow: 0px 0px 16px 6px rgba(0, 0, 0, 0.39);
 }
 
 .price__item-title {
@@ -1823,8 +1826,8 @@ sup {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  -o-object-position: top;
+     object-position: top;
 }
 
 .people__item-info {
