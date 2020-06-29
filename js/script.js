@@ -129,6 +129,56 @@ $(function () {
 
 	});
 
+	var press_slider = new Swiper('.press__slider-container', {
+		containerModifierClass: 'press__slider-container',
+		slideClass: 'press__slider-slide',
+		wrapperClass: 'press__slider-wrapper',
+		// effect: 'fade',
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: false,
+		},
+		observer: true,
+		observeParents: true,
+		slidesPerView: 4,
+		spaceBetween: 40,
+		///autoHeight: true,
+		speed: 800,
+		//touchRatio: 0,
+		//simulateTouch: false,
+		loop: true,
+		//preloadImages: false,
+		//lazy: true,
+		// Dotts
+		//pagination: {
+		//	el: '.slider-quality__pagging',
+		//	clickable: true,
+		//},
+		// Arrows
+		//navigation: {
+		//	nextEl: '.swiper-button-next',
+		//	prevEl: '.swiper-button-prev'
+		//},
+		/* 	breakpoints: {
+				320: {
+					autoHeight: true
+				},
+				768: {
+					autoHeight: false
+				}
+			}, */
+		on: {
+			lazyImageReady: function lazyImageReady() {
+				ibg();
+			}
+		}
+
+		// And if we need scrollbar
+		//scrollbar: {
+		//	el: '.swiper-scrollbar',
+
+	});
+
 	let mixBtn = document.querySelectorAll('.project-btn');
 
 	for (btn of mixBtn) btn.addEventListener('click', (e) => {
@@ -140,18 +190,14 @@ $(function () {
 		$atr.classList.remove('active');
 	};
 
-	$('.wrapper .tab').on('click', function (event) {
+	$('.tab-wrapper .tab').on('click', function (event) {
 		var id = $(this).attr('data-id');
-		$('.wrapper').find('.tab-item').removeClass('active-tab').hide();
-		$('.wrapper .tabs').find('.tab').removeClass('active');
+		$('.tab-wrapper').find('.tab-item').removeClass('active-tab').hide();
+		$('.tab-wrapper .tabs').find('.tab').removeClass('active');
 		$(this).addClass('active');
 		$('#' + id).addClass('active-tab').fadeIn();
 		return false;
 	});
-
-	$('.wrapper .tab.active').click();
-
-
 
 
 	const parallaxNum = 0.3;
