@@ -1030,7 +1030,7 @@ sup {
 .menu__list a {
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 12px;
   color: #fff;
   letter-spacing: 1.2px;
@@ -1077,9 +1077,12 @@ sup {
 }
 
 .header__social {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header__social li + li {
@@ -1088,7 +1091,14 @@ sup {
 
 .header__social-link::before {
   color: #fff;
-  font-size: 20px;
+  font-size: 25px;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.header__social-link:hover::before {
+  color: #fab702;
 }
 
 .slider {
@@ -1397,15 +1407,18 @@ sup {
 
 .project__inner-item {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 25%;
-          flex: 0 0 25%;
+      -ms-flex: 0 0 33.3333%;
+          flex: 0 0 33.3333%;
+}
+
+.project__inner-item--link {
   height: 350px;
   overflow: hidden;
   cursor: pointer;
   position: relative;
 }
 
-.project__inner-item img {
+.project__inner-item--link img {
   width: 100%;
   height: 100%;
   -o-object-position: center;
@@ -1426,9 +1439,11 @@ sup {
   left: 0;
   width: 100%;
   height: 100%;
+  text-align: center;
 }
 
 .inner-item__link span {
+  font-size: 25px;
   position: absolute;
   color: #fab702;
   letter-spacing: 3px;
